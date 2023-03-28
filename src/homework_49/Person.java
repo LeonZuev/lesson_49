@@ -10,5 +10,16 @@ package homework_49;
 то можно это делать в миллисекундах с использованием getTime()!
  */
 
-public class Person  {
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Person implements Comparable<Person> {
+  private String name;
+  private Date birthDate;
+
+  public Person(String name, Date birthDate) { // нужно ли парсить дэйт до этого момента?
+    this.name = name;
+    SimpleDateFormat formatter = new SimpleDateFormat(dd.MM.yyy);
+    this.birthDate = formatter.parse(birthDate);
+  }
 }
